@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  
+  /* Star Wars color palette */
+  --sw-blue: #00d4ff;
+  --sw-purple: #8b5cf6;
+  --sw-gold: #ffd700;
+  --sw-green: #00ff88;
+  --sw-red: #ff4444;
+  --sw-dark-blue: #0a0a2e;
+  --sw-dark-purple: #16213e;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 222 84% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 84% 5%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 195 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 195 100% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-black text-white font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .font-inter {
+    font-family: var(--font-inter), sans-serif;
+  }
+  
+  .font-orbitron {
+    font-family: var(--font-orbitron), sans-serif;
+  }
+  
+  /* Glassmorphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Neon glow effects */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  
+  /* Text glow effects */
+  .text-glow-blue {
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  }
+  
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+  
+  .text-glow-gold {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  /* Animated background */
+  .starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+      radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+      radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+      radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 20s linear infinite;
+  }
+  
+  @keyframes sparkle {
+    from { transform: translateX(0); }
+    to { transform: translateX(-200px); }
+  }
+  
+  /* Opening crawl animation */
+  .crawl-text {
+    perspective: 400px;
+    transform-style: preserve-3d;
+  }
+  
+  .crawl-content {
+    transform: rotateX(25deg) translateZ(0);
+    animation: crawl 20s linear infinite;
+  }
+  
+  @keyframes crawl {
+    0% {
+      transform: rotateX(25deg) translateY(100vh);
+    }
+    100% {
+      transform: rotateX(25deg) translateY(-100vh);
+    }
+  }
+  
+  /* Hover animations */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Gradient animations */
+  .gradient-animation {
+    background: linear-gradient(
+      45deg,
+      #00d4ff,
+      #8b5cf6,
+      #ffd700,
+      #00ff88
+    );
+    background-size: 300% 300%;
+    animation: gradientShift 6s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Pulse animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes pulseGlow {
+    from { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+    to { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #00d4ff, #8b5cf6);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #00a8cc, #7c3aed);
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .starfield {
+    background-size: 150px 75px;
+  }
+  
+  .crawl-content {
+    animation-duration: 15s;
+  }
+}
