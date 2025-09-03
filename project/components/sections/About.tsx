@@ -87,9 +87,9 @@ export default function About() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
         {[
-          { number: '50+', label: 'Projects Completed', color: 'blue' },
-          { number: '3+', label: 'Years Experience', color: 'purple' },
-          { number: '20+', label: 'Technologies', color: 'gold' },
+          { number: '15+', label: 'Projects Completed', color: 'blue' },
+          { number: '1+', label: 'Years Experience', color: 'purple' },
+          { number: '15+', label: 'Technologies', color: 'gold' },
           { number: '100%', label: 'Client Satisfaction', color: 'green' },
         ].map((stat, index) => (
           <div key={index} className="text-center glass p-6 rounded-xl hover-lift">

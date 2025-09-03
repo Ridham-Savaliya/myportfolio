@@ -90,10 +90,11 @@ export default function Achievements() {
       {/* Additional stats */}
       <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
         {[
-          { value: '15+', label: 'Certifications', color: 'blue' },
-          { value: '5+', label: 'Awards Won', color: 'purple' },
-          { value: '3+', label: 'Hackathons', color: 'gold' },
-          { value: '500+', label: 'Hours Learning', color: 'green' },
+          { value: '4+', label: 'Certifications', color: 'blue' },
+{ value: '1+', label: 'Industry Experiences', color: 'purple' },
+{ value: '20+', label: 'Projects Built', color: 'gold' },
+{ value: '5000+', label: 'Learning Hours', color: 'green' },
+
         ].map((stat, index) => (
           <div
             key={index}
