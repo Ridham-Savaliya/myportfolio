@@ -67,20 +67,21 @@ export default function Hero() {
       </div>
 
       {/* Action buttons - anchored to hero */}
-      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-4 justify-center items-center z-30">
+      <div className="absolute bottom-60 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row gap-4 justify-center items-center z-30 w-full px-4">
         <a
           href="#projects"
-          className="px-8 py-4 bg-gradient-to-r from-[var(--sw-blue)] to-[var(--sw-purple)] text-white font-semibold rounded-lg glow-blue hover-lift hover:glow-purple transition-all duration-300 font-orbitron"
+          className="w-full sm:w-auto text-center px-6 sm:px-8 py-3 bg-gradient-to-r from-[var(--sw-blue)] to-[var(--sw-purple)] text-white font-semibold rounded-lg glow-blue hover-lift hover:glow-purple transition-all duration-300 font-orbitron text-sm sm:text-md"
         >
           VIEW MY WORK
         </a>
         <a
           href="#contact"
-          className="px-8 py-4 glass border border-[var(--sw-blue)]/30 text-[var(--sw-blue)] font-semibold rounded-lg hover:glow-blue hover-lift transition-all duration-300 font-orbitron"
+          className="w-full sm:w-auto text-center px-6 sm:px-8 py-3 glass border border-[var(--sw-blue)]/30 text-[var(--sw-blue)] font-semibold rounded-lg hover:glow-blue hover-lift transition-all duration-300 font-orbitron text-sm sm:text-md"
         >
           GET IN TOUCH
         </a>
       </div>
+
 
       {/* Scroll indicator - anchored to hero */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-30">
