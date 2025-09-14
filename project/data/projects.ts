@@ -4,7 +4,7 @@ export const projectsData = [
     title: 'Collaborativex – AI Powered Whiteboard',
     description: 'A collaborative whiteboard platform featuring AI-powered assistance for smart drawing, real-time multi-user editing, natural language-based shape recognition, and seamless export options. Designed for productivity, teamwork, and creative brainstorming.',
     category: 'fullstack',
-    image: 'https://res.cloudinary.com/dsqpc6sp6/image/upload/v1756911660/collaborativex_bg_tsywgk.jpg',
+    image: 'https://res.cloudinary.com/dsqpc6sp6/image/upload/v1757831587/Screenshot_2025-09-14_120300_ujusbk.png',
     technologies: [
       'Next.js',
       'Node.js',
@@ -22,12 +22,31 @@ export const projectsData = [
     demo: 'https://collaborativex-whiteboard.vercel.app',
     github: 'https://github.com/Ridham-Savaliya/collaborativeX---whiteboard',
   },
+   {
+    id: 3,
+    title: 'Formboost – Smart Form Management',
+    description: 'A modern form management and automation tool designed to save time and effort. Includes features like user authentication with OAuth 2.0, real-time data saving, MySQL-powered storage, and a responsive UI for efficient data handling.',
+    category: 'fullstack',
+    image: 'https://res.cloudinary.com/dsqpc6sp6/image/upload/v1757831322/Screenshot_2025-09-14_115752_pwebjs.png',
+    technologies: [
+      'React.js',
+      'Sequelize',
+      'MySQL',
+      'Node.js',
+      'Express.js',
+      'Tailwind CSS',
+      'OAuth 2.0',
+      'MySQL Workbench'
+    ],
+    demo: 'https://formboom.site',
+    github: 'https://github.com/Ridham-Savaliya/Formboost',
+  },
   {
     id: 2,
     title: 'Quickbites – Online Dining Solution',  
     description: 'A full-stack food ordering and dining management system with features like real-time order tracking, inventory management, online payments, and a customer analytics dashboard for restaurants and cafes.',
     category: 'fullstack',
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
+    image: 'https://res.cloudinary.com/dsqpc6sp6/image/upload/v1757831729/Screenshot_2025-09-14_120523_t3zzxe.png',
     technologies: [
       'React.js',
       'MongoDB',
@@ -43,25 +62,7 @@ export const projectsData = [
     demo: 'https://quickbites-one.vercel.app',
     github: 'https://github.com/dhruviksavaliya1212/Quick_Bites',
   },
-  {
-    id: 3,
-    title: 'Formboost – Smart Form Management',
-    description: 'A modern form management and automation tool designed to save time and effort. Includes features like user authentication with OAuth 2.0, real-time data saving, MySQL-powered storage, and a responsive UI for efficient data handling.',
-    category: 'fullstack',
-    image: 'https://miro.medium.com/v2/resize:fit:1400/1*ThrwevcjaDOmEVPgPYIgTg.png',
-    technologies: [
-      'React.js',
-      'Sequelize',
-      'MySQL',
-      'Node.js',
-      'Express.js',
-      'Tailwind CSS',
-      'OAuth 2.0',
-      'MySQL Workbench'
-    ],
-    demo: 'https://demo.example.com',
-    github: 'https://github.com/yourusername/chat-app',
-  },
+ 
   {
     id: 4,
     title: 'Notify – Notice Management System',
